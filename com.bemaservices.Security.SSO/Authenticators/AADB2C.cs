@@ -1,4 +1,5 @@
-﻿using IdentityModel;
+﻿using BCrypt.Net;
+using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.IdentityModel.Protocols;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;

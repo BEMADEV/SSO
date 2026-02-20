@@ -1,0 +1,17 @@
+{
+  "lockFileVersion": 1,
+  "versions": [
+    {
+      "version": "1.0.0",
+      "installedFiles": [
+        "Bin/com.bemaservices.Security.SSO.dll"
+      ]
+    },
+    {
+      "version": "1.4.6",
+      "installedFiles": [
+        "Bin/com.bemaservices.Security.SSO.dll"
+      ]
+    }
+  ]
+}
