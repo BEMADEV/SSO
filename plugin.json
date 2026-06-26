@@ -4,7 +4,7 @@
         "code": "com.bemaservices"
     },
     "name": "Security.SSO",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "include": {
         "com.bemaservices.Security.SSO/bin/Release/net472/com.bemaservices.Security.SSO.dll": "Bin/",
         "com.bemaservices.Security.SSO.Obsidian/dist/**": "Plugins/com_bemaservices/Security.SSO"
