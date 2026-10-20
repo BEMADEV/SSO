@@ -18,6 +18,12 @@
       "installedFiles": [
         "Bin/com.bemaservices.Security.SSO.dll"
       ]
+    },
+    {
+      "version": "1.4.8",
+      "installedFiles": [
+        "Bin/com.bemaservices.Security.SSO.dll"
+      ]
     }
   ]
 }
