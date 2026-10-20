@@ -364,10 +364,10 @@ namespace com.bemaservices.Security.SSO.Authenticators
                     throw new Exception(response.Error);
                 }
 
-                // Output access token details if debug mode
+                // Log token receipt without exposing the token if debug mode is enabled.
                 if (debugModeEnabled)
                 {
-                    var exceptionText = string.Format("AADB2C Access Token: {0}", response.IdentityToken);
+                    var exceptionText = string.Format("AADB2C Identity Token: {0}", TokenLogSanitizer.RedactTokenForLogging(response.IdentityToken));
                     ExceptionLogService.LogException(new Exception(exceptionText, new Exception(EXCEPTION_DEBUG_TEXT)));
                 }
 

@@ -131,7 +131,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
 
                 if (debugModeEnabled)
                 {
-                    var exceptionText = string.Format("Access Token: {0}", restResponse.Content);
+                    var exceptionText = string.Format("Token Response: {0}", TokenLogSanitizer.SanitizeJsonForLogging(restResponse.Content));
                     ExceptionLogService.LogException(new Exception(exceptionText, new Exception(EXCEPTION_DEBUG_TEXT)));
                 }
 
@@ -141,7 +141,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
 
                     if (debugModeEnabled)
                     {
-                        var exceptionText = string.Format("User: {0}", restResponse.Content);
+                        var exceptionText = string.Format("User: {0}", TokenLogSanitizer.SanitizeJsonForLogging(restResponse.Content));
                         ExceptionLogService.LogException(new Exception(exceptionText, new Exception(EXCEPTION_DEBUG_TEXT)));
                     }
 
@@ -154,7 +154,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
                 }
                 else
                 {
-                    var exceptionText = string.Format("User: {0}", restResponse.Content);
+                    var exceptionText = string.Format("User: {0}", TokenLogSanitizer.SanitizeJsonForLogging(restResponse.Content));
                     ExceptionLogService.LogException(new Exception(exceptionText, new Exception(EXCEPTION_DEBUG_TEXT)));
                 }
             }
@@ -191,7 +191,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
 
                 if ( debugModeEnabled )
                 {
-                    var exceptionText = string.Format( "Access Token: {0}", restResponse.Content );
+                    var exceptionText = string.Format( "Token Response: {0}", TokenLogSanitizer.SanitizeJsonForLogging( restResponse.Content ) );
                     ExceptionLogService.LogException( new Exception( exceptionText, new Exception( EXCEPTION_DEBUG_TEXT ) ) );
                 }
 
@@ -201,7 +201,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
                     
                     if ( debugModeEnabled )
                     {
-                        var exceptionText = string.Format( "User: {0}", restResponse.Content );
+                        var exceptionText = string.Format( "User: {0}", TokenLogSanitizer.SanitizeJsonForLogging( restResponse.Content ) );
                         ExceptionLogService.LogException( new Exception( exceptionText, new Exception( EXCEPTION_DEBUG_TEXT ) ) );
                     }
 
@@ -220,7 +220,7 @@ namespace com.bemaservices.Security.SSO.Authenticators
                 }
                 else
                 {
-                    var exceptionText = string.Format( "User: {0}", restResponse.Content );
+                    var exceptionText = string.Format( "User: {0}", TokenLogSanitizer.SanitizeJsonForLogging( restResponse.Content ) );
                     ExceptionLogService.LogException( new Exception( exceptionText, new Exception( EXCEPTION_DEBUG_TEXT ) ) );
                 }
             }
