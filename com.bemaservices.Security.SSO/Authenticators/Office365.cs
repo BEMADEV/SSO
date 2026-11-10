@@ -350,13 +350,23 @@ namespace com.bemaservices.Security.SSO.Authenticators
         public static string GetOffice365User( Office365_User office365User, string accessToken = "" )
         {
             // accessToken is required
-            if ( accessToken.IsNullOrWhiteSpace() )
+            if ( accessToken.IsNullOrWhiteSpace() || office365User == null )
             {
                 return null;
             }
 
             string username = string.Empty;
             string email = office365User.userPrincipalName;
+            if ( email.IsNullOrWhiteSpace() )
+            {
+                email = office365User.mail;
+            }
+
+            if ( email.IsNullOrWhiteSpace() )
+            {
+                return null;
+            }
+
             string office365Id = office365User.id;
 
             string userName = "Office365_" + email;
@@ -373,8 +383,8 @@ namespace com.bemaservices.Security.SSO.Authenticators
                 if ( user == null )
                 {
                     // Get name/email from Office 365 login
-                    string lastName = office365User.surName.ToString();
-                    string firstName = office365User.givenName.ToString();
+                    string lastName = office365User.surName ?? string.Empty;
+                    string firstName = office365User.givenName ?? string.Empty;
 
                     Person person = null;
 
